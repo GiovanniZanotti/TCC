@@ -1,0 +1,9 @@
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+application:
+  description: Backend do Projeto Interdisciplinar
+  version: 1.0

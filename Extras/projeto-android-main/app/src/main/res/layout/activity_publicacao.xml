@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".view.activity.PublicacaoActivity">
+
+    <ImageView
+        android:id="@+id/img_livro"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_baseline_account_circle_24" />
+
+    <TextView
+        android:id="@+id/titulo_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@id/img_livro"
+        android:ellipsize="marquee"
+        android:fontFamily="@font/baloo"
+        android:singleLine="false"
+        android:text="Título"
+        android:textColor="@color/dark_gray"
+        android:textSize="24dp" />
+
+    <TextView
+        android:id="@+id/autor_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
+        android:layout_toRightOf="@id/img_livro"
+        android:ellipsize="marquee"
+        android:fontFamily="@font/baloo"
+        android:singleLine="true"
+        android:text="Autor"
+        android:textColor="@color/gray"
+        android:textSize="20dp" />
+
+
+    <Button
+        android:id="@+id/btn_addBiblioteca"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="@color/yellow"
+        android:text="Adicionar na Biblioteca"
+        android:textAlignment="center"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/txt_texto_descricao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_livro"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="160dp"
+        android:fontFamily="@font/baloo"
+        android:text="Descrição:"
+        android:textColor="@color/gray"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txt_Descricao"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_below="@id/txt_texto_descricao"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/baloo"
+        android:inputType="textMultiLine"
+        android:scrollbars="vertical"
+        android:text="Descrição: "
+        android:textColor="@color/gray"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/txt_texto_imagens"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_Descricao"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/baloo"
+        android:text="Imagens:"
+        android:textColor="@color/gray"
+        android:textSize="20sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_act_imagens"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_texto_imagens"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="3"
+        tools:itemCount="6"
+        tools:listitem="@layout/item_imagem" />
+
+    <TextView
+        android:id="@+id/txv_texto_comentario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rv_act_imagens"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/baloo"
+        android:text="Comentários:"
+        android:textColor="@color/dark_gray"
+        android:textSize="22dp" />
+
+    <Button
+        android:id="@+id/btn_comentar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rv_act_imagens"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="@color/yellow"
+        android:text="Comentar"
+        android:textAlignment="center"
+        android:textSize="12dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleViewComentatios"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btn_comentar"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/comentario_item" />
+
+    <TextView
+        android:id="@+id/tv_vazio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/recycleViewComentatios"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/baloo"
+        android:text="Sem comentários!"
+        android:textColor="@color/gray"
+        android:textSize="22sp"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+</RelativeLayout>

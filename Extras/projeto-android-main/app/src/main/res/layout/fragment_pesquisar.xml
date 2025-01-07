@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:fontFamily="@font/baloo"
+        android:textColor="@color/gray"
+        android:textSize="24sp"
+        tools:text="Todos os usuários:" />
+
+    <EditText
+        android:id="@+id/et_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title"
+        android:layout_marginHorizontal="8dp"
+        android:layout_toStartOf="@id/btn_search"
+        android:backgroundTint="@color/gray"
+        android:digits="0123456789 qwertyuiopasdfghjklçzxcvbnm,ãõâôáóàòñ'.QWERTYUIOPASDFGHJKLÇZXCVBNM@"
+        android:hint="Pesquisar pelo nome"
+        android:inputType="text"
+        android:singleLine="true"
+        android:textColor="@color/dark_gray" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_search"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/et_search"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="8dp"
+        app:icon="@drawable/ic_search" />
+
+    <Spinner
+        android:id="@+id/spinner_ordenacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_search"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/spinner_ordenacao">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/tv_vazio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/baloo"
+        android:textColor="@color/gray"
+        android:textSize="22sp"
+        android:visibility="gone"
+        tools:text="Você não possui seguidores!"
+        tools:visibility="visible" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/yellow"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+</RelativeLayout>

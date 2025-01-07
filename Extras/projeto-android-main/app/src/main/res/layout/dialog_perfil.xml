@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_close"
+        app:tint="@color/gray" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="@font/baloo"
+        android:text="Perfil"
+        android:textColor="@color/gray"
+        android:textSize="28sp" />
+
+    <TextView
+        android:id="@+id/tv_icon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/tv_title"
+        android:background="@drawable/circle"
+        android:fontFamily="@font/baloo"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        tools:text="L" />
+
+    <TextView
+        android:id="@+id/tv_nome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_icon"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/tv_icon"
+        android:fontFamily="@font/baloo"
+        android:maxLines="2"
+        android:minLines="1"
+        android:textColor="@color/dark_gray"
+        android:textSize="25sp"
+        tools:text="Lucas Dias Pedrosa" />
+
+    <TextView
+        android:id="@+id/tv_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_nome"
+        android:layout_alignStart="@id/tv_nome"
+        android:fontFamily="@font/baloo"
+        android:maxLines="2"
+        android:minLines="1"
+        android:textColor="@color/gray"
+        tools:text="lucas.dias.pedrosa@gmail.com" />
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_email"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_data_cadastro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/baloo"
+            android:textColor="@color/gray"
+            tools:text="Cadastrou-se em 04/07/2021" />
+
+        <TextView
+            android:id="@+id/tv_qtd_seguidores"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:fontFamily="@font/baloo"
+            android:textColor="@color/gray"
+            tools:text="24 seguidores" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_biblioteca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/container"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/baloo"
+        android:text="Biblioteca:"
+        android:textColor="@color/gray"
+        android:textSize="28sp" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_biblioteca"
+        android:layout_marginTop="8dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/tv_vazio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/baloo"
+        android:text="Whoops! Biblioteca vazia"
+        android:textColor="@color/gray"
+        android:textSize="16sp"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/yellow"
+        android:visibility="visible" />
+
+</RelativeLayout>

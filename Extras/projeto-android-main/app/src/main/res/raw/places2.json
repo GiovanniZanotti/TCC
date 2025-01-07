@@ -1,0 +1,106 @@
+[
+    {
+        "geometry": {
+            "location": {
+                "lat": -22.99889992329763,
+                "lng": -46.99284168629311
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": -22.99889992329763,
+                    "lng": -46.99284168629311
+                },
+                "southwest": {
+                    "lat": -22.99889992329763,
+                    "lng": -46.99284168629311
+                }
+            }
+        },
+        "name": "Valinhos",
+        "rating": 4.2,
+        "vicinity": "Valinhos, SP"
+    },{
+        "geometry": {
+            "location": {
+                "lat": -22.980183,
+                "lng": -46.990351
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": -22.980183,
+                    "lng": -46.990351
+                },
+                "southwest": {
+                    "lat": -22.980183,
+                    "lng": -46.990351
+                }
+            }
+        },
+        "name": "Valencia Cyclery",
+        "rating": 4.2,
+        "vicinity": "1077 Valencia Street, San Francisco"
+    },
+    {
+        "geometry": {
+            "location": {
+                "lat": -22.97506141302338,
+                "lng": -46.9953374819806
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": -22.97506141302338,
+                    "lng": -46.9953374819806
+                },
+                "southwest": {
+                    "lat": -22.97506141302338,
+                    "lng": -46.9953374819806
+                }
+            }
+        },
+        "name": "Energia",
+        "rating": 4.5,
+        "vicinity": "425 Jefferson Street, San Francisco"
+    },
+    {
+        "geometry": {
+            "location": {
+                "lat": -22.975061413023365,
+                "lng": -46.987548347041425
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": -22.975061413023365,
+                    "lng": -46.987548347041425
+                },
+                "southwest": {
+                    "lat": -22.975061413023365,
+                    "lng": -46.987548347041425
+                }
+            }
+        },
+        "name": "Grama",
+        "rating": 4,
+        "vicinity": "1233 Howard Street, San Francisco"
+    },
+    {
+        "geometry": {
+            "location": {
+                "lat": -22.97849054853246,
+                "lng": -46.996654019250215
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": -22.97849054853246,
+                    "lng": -46.996654019250215
+                },
+                "southwest": {
+                    "lat": -22.97849054853246,
+                    "lng": -46.996654019250215
+                }
+            }
+        },
+        "name": "Seguranca",
+        "rating": 4.1,
+        "vicinity": "2715 Hyde Street, San Francisco"
+    }
+]

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="5dp"
+    android:layout_marginBottom="8dp"
+    android:backgroundTint="@color/white"
+    android:elevation="10dp"
+    android:padding="5dp"
+    app:cardCornerRadius="12dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/tv_imagem"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tv_titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_imagem"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/baloo"
+            android:textColor="@color/dark_gray"
+            android:textSize="18sp"
+            tools:text="Inverno do Mundo" />
+
+        <TextView
+            android:id="@+id/tv_autor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_titulo"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/baloo"
+            android:textColor="@color/gray"
+            tools:text="Ken Follet" />
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

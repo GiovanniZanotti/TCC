@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <EditText
+        android:id="@+id/et_comentario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Adicione um comentário..."
+        android:textColor="@color/gray"
+        android:textColorHint="#D1D1D1" />
+
+    <Button
+        android:id="@+id/btn_comentar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_comentario"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Comentar"
+        android:textAlignment="center"
+        android:textSize="12sp" />
+
+</RelativeLayout>
